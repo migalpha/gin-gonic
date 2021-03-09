@@ -16,6 +16,19 @@ Change for this:
 import "your-dir/pkg/setting"
 ```
 
+## Build - DEV
+
+Run the following command:
+
+```sh
+docker build -t app-name -f dev.Dockerfile .
+```
+
+When the build is done, run:
+
+```sh
+docker run --rm -it -p port:port app-name go run main.go api
+```
 ## Build
 
 Run the following command:
@@ -27,7 +40,7 @@ docker build -t app-name .
 When the build is done, run:
 
 ```sh
-docker run --rm -it -p port:port app-name go run main.go api
+docker run --rm -it -p port:port app-name main api
 ```
 ## environment variables
 
